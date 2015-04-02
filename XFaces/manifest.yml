@@ -1,0 +1,14 @@
+declared-services:
+- repodb:
+    type: cloudantNoSQLDB
+    plan: Shared 
+applications:
+- name: XFaces
+  memory: 512M
+  instances: 1
+  host: ${random-word}-faces
+  domain: mybluemix.net
+  path: XFaces.war
+  services:
+  - repodb
+  

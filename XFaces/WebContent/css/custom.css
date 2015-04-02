@@ -1,0 +1,56 @@
+h4 {
+   margin-bottom: 4px;
+   margin-top: 4px;
+}
+
+.profile .sector, .profile .position {
+   font-style: italic;
+}
+
+.profile .email:hover {
+   text-decoration: none;
+}
+
+.center {
+   text-align: center;
+}
+
+.center form {
+   display: inline-block;
+}
+
+#content-row {
+   margin-top: 30px;
+}
+
+.profile {
+   overflow: hidden;
+   white-space: nowrap;
+}
+
+.profile-content {
+   overflow: hidden;
+   text-overflow: ellipsis;  
+}
+
+.small-profile .profile-image {
+   max-width: 25%; 
+   display:inline-block; 
+   vertical-align: top;
+}
+
+.small-profile .profile-content {
+   display:inline-block; 
+   vertical-align: top;
+   padding-left: 15px;
+   max-width: 75%;
+}
+.thumbnail {
+   cursor:pointer;
+}
+
+.alert ul {
+   list-style: none;
+   /* Undo spacing from now gone bullets */
+   padding-left: 0px;
+}

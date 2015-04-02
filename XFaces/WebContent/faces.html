@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>X Faces</title>
+
+      <!-- template polyfill -->
+      <script src="js/platform.js"></script>
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <!-- themes -->
+      <!-- This one is pretty good too -->
+<!--            <link rel="stylesheet" href="css/cosmo.css">-->
+      <link rel="stylesheet" href="css/superhero.css">
+
+      <script src="js/jquery2.1.1.js"></script>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <script src="js/app.js"></script>
+
+      <link rel="stylesheet" href="css/custom.css">
+   </head>
+   <body>
+   
+ 
+   
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 center">
+               <h3>X Faces</h3>
+               <large-profile></large-profile>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12 center">
+               <form class="form-inline" role="form">
+                  <div class="form-group">
+                     <label class="sr-only" for="nameInput">Name</label>
+                     <input type="text" class="form-control" id="nameInput" autocomplete="off" placeholder="Enter name">
+                  </div>
+                  <button type="button" id="searchBtn" class="btn btn-default">Search</button>
+               </form>
+            </div>
+         </div>
+         <div class="row" id="content-row">
+         </div>
+         <div class="row" >
+            <div class="col-md-12 center">
+               <div id="no-results" class="alert alert-warning" role="alert"></div>
+               <div id="more-results" class="alert alert-info" role="alert"></div>
+            </div>
+         </div>
+
+         <template id="small-profile">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="profile small-profile thumbnail">
+                  <img class="profile-image media-object img-responsive"/>
+                  <div class="profile-content">
+                     <h4 class="name"></h4>
+                     <span class="position"></span>
+                     <br/>
+                     <span><a class="email"></a></span>
+                  </div>
+               </div>
+            </div>
+         </template>
+
+         <template id="large-profile">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+               <div class="profile thumbnail">
+                  <img class="profile-image img-responsive"/>
+                  <div class="profile-content caption">
+                     <h4 class="name"></h4>
+                     <span class="position"></span>
+                     <br/>
+                     <p><a class="email"></a></p>
+                  </div>
+               </div>
+            </div>
+         </template>
+
+         <template id="modal-profile">
+            <div class="modal fade" id="mod">
+               <div class="modal-dialog">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="name"></h4>
+                     </div>
+                     <div class="modal-body">
+                        <p><strong>Position:</strong> <em class="position"></em></p>
+                        <p><strong>Region:</strong> <em class="region"></em></p>
+                        <p><strong>Phone:</strong> <em class="phone"></em></p>
+                        <p><a class="email"></a></p>
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                     </div>
+                  </div><!-- /.modal-content -->
+               </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+         </template>
+
+      </div>
+   </body>
+</html>
