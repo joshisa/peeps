@@ -3,7 +3,7 @@ declared-services:
     type: cloudantNoSQLDB
     plan: Shared 
 applications:
-- name: XFaces
+- name: peeps
   memory: 512M
   instances: 1
   host: ${random-word}-faces
