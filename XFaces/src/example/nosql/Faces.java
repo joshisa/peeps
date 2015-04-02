@@ -100,12 +100,10 @@ public class Faces extends HttpServlet{
 		}
 		
 		String query = URLEncoder.encode(request.getParameter("q"), "UTF-8");
-		response.setContentType("text/html");
-		response.setHeader("debug", "https://hub.jazz.net/explore/publicProjects?text="+query);
-		//response.setContentType("application/json");
-		//response.setHeader("debug", "/faces100k/_design/employees/_search/faces?q="+query+"&limit=36");
-		//HttpResponse httpResponse = httpClient.get("/faces100k/_design/employees/_search/faces?q="+query+"&limit=36");
-		HttpResponse jazzhubPublicRepos = httpClient.get("https://hub.jazz.net/explore/publicProjects?text="+query);
+		
+		response.setContentType("application/json");
+		response.setHeader("debug", "/faces100k/_design/employees/_search/faces?q="+query+"&limit=36");
+		HttpResponse httpResponse = httpClient.get("/faces100k/_design/employees/_search/faces?q="+query+"&limit=36");
 		IOUtils.copy(jazzhubPublicRepos.getContent(), response.getOutputStream());	
 	}	
 	
