@@ -104,7 +104,7 @@ public class Faces extends HttpServlet{
 		response.setContentType("application/json");
 		response.setHeader("debug", "/faces100k/_design/employees/_search/faces?q="+query+"&limit=36");
 		HttpResponse httpResponse = httpClient.get("/faces100k/_design/employees/_search/faces?q="+query+"&limit=36");
-		IOUtils.copy(jazzhubPublicRepos.getContent(), response.getOutputStream());	
+		IOUtils.copy(httpResponse.getContent(), response.getOutputStream());	
 	}	
 	
 }
