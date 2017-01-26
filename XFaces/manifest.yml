@@ -1,7 +1,7 @@
 declared-services:
 - repodb:
     type: cloudantNoSQLDB
-    plan: Shared 
+    plan: Lite
 applications:
 - name: peeps
   memory: 512M
@@ -11,4 +11,3 @@ applications:
   path: XFaces.war
   services:
   - repodb
-  
