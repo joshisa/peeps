@@ -29,7 +29,7 @@ public class Faces extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	
 	// set default db connection credentials 
-	String databaseHost = "user.cloudant.com";
+	String databaseHost = "cloudant.com";
 	String user = "user";
 	String password = "password";
 	Integer port = 443;
@@ -102,8 +102,8 @@ public class Faces extends HttpServlet{
 		String query = URLEncoder.encode(request.getParameter("q"), "UTF-8");
 		
 		response.setContentType("application/json");
-		response.setHeader("debug", "/faces100k/_design/employees/_search/faces?q="+query+"&limit=36");
-		HttpResponse httpResponse = httpClient.get("/faces100k/_design/employees/_search/faces?q="+query+"&limit=36");
+		response.setHeader("debug", "/faces-real/_design/employees/_search/faces?q="+query+"&limit=36");
+		HttpResponse httpResponse = httpClient.get("/faces-real/_design/employees/_search/faces?q="+query+"&limit=36");
 		IOUtils.copy(httpResponse.getContent(), response.getOutputStream());	
 	}	
 	
